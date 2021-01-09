@@ -62,6 +62,11 @@ class Information
      */
     private $twitch;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $background;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -171,6 +176,18 @@ class Information
     public function setTwitch(string $twitch): self
     {
         $this->twitch = $twitch;
+
+        return $this;
+    }
+
+    public function getBackground(): ?string
+    {
+        return $this->background;
+    }
+
+    public function setBackground(string $background): self
+    {
+        $this->background = $background;
 
         return $this;
     }
