@@ -4,26 +4,26 @@
 
 {% block body %}
 <div class="container-fluid">
-    <div class="row">
-        <h1></h1>
-        <p></p>
+    <div class="row" style="background-image:url('{{ information[0].background }}'); background-repeat: no-repeat">
+        <h1>{{ information[0].name }}</h1>
+        <p>Joueur {{ information[0].game }}</p>
     </div>
     <div class="row">
         <div class="col-md-4">
             <img src="" alt="">
         </div>
         <div class="col-md-8">
-            <h2></h2>
-            <h3></h3>
-            <p></p>
-            <a href="#">Rejoignez moi sur Twitch</a>
+            <h2>Je suis {{ information[0].name }}</h2>
+            <h3>{{ information[0].passion }}</h3>
+            <p>{{ information[0].presentation }}</p>
+            <a href="{{ information[0].twitch }}">Rejoignez moi sur Twitch</a>
         </div>
     </div>
     <div class="row">
         <div class="col-md-8">
             <h2></h2>
             <p></p>
-            <a href="#"> Pour accéder à ma chaine YouTube</a>
+            <a href="{{ information[0].youtube }}"> Pour accéder à ma chaine YouTube</a>
         </div>
         <div class="col-md-4">
         </div>

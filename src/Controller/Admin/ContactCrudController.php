@@ -15,17 +15,6 @@ class ContactCrudController extends AbstractCrudController
         return Contact::class;
     }
 
-    /*
-    public function configureFields(string $pageName): iterable
-    {
-        return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
-        ];
-    }
-    */
-
     public function configureActions(Actions $actions): Actions
     {
         return $actions
@@ -37,4 +26,15 @@ class ContactCrudController extends AbstractCrudController
         ->add(Crud::PAGE_INDEX, Action::DETAIL)
         ;
     }
+
+    /*
+    public function configureFields(string $pageName): iterable
+    {
+        return [
+            IdField::new('id'),
+            TextField::new('title'),
+            TextEditorField::new('description'),
+        ];
+    }
+    */
 }
